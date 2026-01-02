@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cartas Anônimas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- 🔔 ADSENSE (coloque depois de aprovado) -->
+  <!--
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    crossorigin="anonymous"></script>
+  -->
+</head>
+<body>
+
+  <h1>Cartas Anônimas</h1>
+  <p>Escreva para o mundo. Leia alguém que você nunca conheceu.</p>
+
+  <div id="home">
+    <button onclick="mostrarEscrever()">✍️ Escrever carta</button>
+    <button onclick="mostrarLer()">📖 Ler carta</button>
+  </div>
+
+  <!-- ESCREVER -->
+  <div id="escrever" class="hidden">
+    <textarea id="textoCarta" placeholder="Escreva sua carta aqui..."></textarea>
+    <button onclick="enviarCarta()">Enviar anonimamente</button>
+    <button onclick="voltar()">Voltar</button>
+  </div>
+
+  <!-- LER -->
+  <div id="ler" class="hidden">
+    <div id="carta"></div>
+
+    <!-- 🔔 ANÚNCIO NO MEIO -->
+    <div class="ads">
+      Anúncio
+    </div>
+
+    <textarea id="resposta" placeholder="Responder anonimamente (opcional)"></textarea>
+    <button onclick="responderCarta()">Responder</button>
+    <button onclick="voltar()">Voltar</button>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
