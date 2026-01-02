@@ -1,3 +1,23 @@
+// só executa se o elemento existir
+const textoCarta = document.getElementById("textoCarta");
+if (textoCarta) {
+  window.enviarCarta = async () => {
+    const texto = textoCarta.value;
+    if (texto.length < 20) {
+      alert("Escreva pelo menos 20 caracteres.");
+      return;
+    }
+    await addDoc(collection(db, "cartas"), { texto });
+    alert("Carta enviada.");
+    textoCarta.value = "";
+  };
+}
+
+const cartaDiv = document.getElementById("carta");
+if (cartaDiv) {
+  carregarCartaAleatoria();
+}
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import {
   getFirestore,
